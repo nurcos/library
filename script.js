@@ -44,7 +44,9 @@ function addBookToLibrary(){
     if(myLibrary[i] == undefined){
       continue; //if array index is blank, dont display book
     }
-    bookDiv.textContent = myLibrary[i].info();
+    bookDiv.textContent = myLibrary[i].title;
+    bookDiv.textContent += ', by ' + myLibrary[i].author;
+    bookDiv.textContent += ', pages: ' + myLibrary[i].pages;
     bookDiv.classList.add('book')
     bookDiv.setAttribute('id', i);
 
